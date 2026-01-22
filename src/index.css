@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-royal: #1D4ED8;
+  --color-lime: #BEF264;
+  --font-pixel: 'Press Start 2P', system-ui;
+  --font-body: 'Inter', sans-serif;
+}
+
+@theme {
+  --font-pixel: 'Press Start 2P', system-ui;
+  --font-body: 'Inter', sans-serif;
+  --color-royal: #1D4ED8;
+  --color-lime: #BEF264;
+}
+
+body {
+  background-color: #050505;
+  color: white;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+.text-shadow-custom {
+  text-shadow: 2px 2px 0px #000;
+}
+
+.folder-tab {
+  clip-path: polygon(0 0, 40% 0, 45% 100%, 0% 100%);
+}
+
+.reveal-text {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(4px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
