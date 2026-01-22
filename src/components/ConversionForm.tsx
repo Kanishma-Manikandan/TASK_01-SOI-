@@ -50,7 +50,7 @@ const ConversionForm: React.FC<{ showGuide: boolean; resetTrigger: number }> = (
         setResult(null);
 
         try {
-            const res = await fetch('http://127.0.0.1:8000/convert', {
+            const res = await fetch('/api/convert', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url })
